@@ -25,7 +25,7 @@ export CGO_CFLAGS="-I$MQ_INSTALLATION_PATH/inc"
 export CGO_LDFLAGS="-L$MQ_INSTALLATION_PATH/lib64 -Wl,-rpath,$MQ_INSTALLATION_PATH/lib64"
 ```
 
-Nota: dependiendo del linux elegido, puede ser necesario instalar el compilador C, para eso ejecutar.
+Nota: dependiendo del linux elegido puede ser necesario instalar el compilador C, para eso ejecutar.
 
 ```
 sudo apt install gcc
@@ -39,7 +39,6 @@ Se debe contar con Docker instalado y ejecutar siguiente comando
 
 ```
 docker run --env LICENSE=accept --env MQ_QMGR_NAME=QM1 --volume /home/<<users>>/dockermq/:/mnt/mqm --publish 1414:1414 --publish 9443:9443 --detach --env MQ_APP_PASSWORD=passw0d icr.io/ibm-messaging/mq:9.3.0.0-r2
-
 ```
 
 ### Documentacion oficial : https://hub.docker.com/r/ibmcom/mq/
@@ -106,5 +105,5 @@ Se puede utilizar la shell `putget.sh` para ejecutar ambas funcionalidades o se 
 Ejecución shell
 
 ```
-sh putget.sh
+sh putget.sh "mensaje de prueba"
 ```
